@@ -149,6 +149,7 @@ export class unSdg extends DDDSuper(LitElement) {
   }
 
   render() {
+    // const imgSrc = new URL(`../lib/svgs/goal-${this.goal}.svg`, import.meta.url).href;
     // Sets the image source according to what number the goal is
     let imgSrc = new URL(`../public/svgs/goal-${this.goal}.svg`, import.meta.url).href;
     // If the goal is all, set it to the all svg
