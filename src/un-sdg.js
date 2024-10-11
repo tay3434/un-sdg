@@ -168,7 +168,7 @@ export class unSdg extends DDDSuper(LitElement) {
        </style>
       <!-- changes background colors based on what goal is set -->
       <!-- all and circle has white background to match background of svg -->
-      <div class="svg-wrapper" 
+      <div class="wrapper" 
         style="background-color: var(--un-sdg-goal-${this.goal});"
         >
         <! only runs if colorOnly is false -->
