@@ -16,7 +16,7 @@
     #demo {
       margin: var(--ddd-spacing-2);
     }
-    .sdc-wrapper {
+    .wrapper {
       display: flex;
       flex-wrap: wrap;
     }
@@ -40,18 +40,18 @@
       goal="2" 
       width="400px"
       height="400px"
-      label="overridden alt text"
+      label="Default Values"
       loading="eager"
       fetchpriority="high"
     ></un-sdg>
 
     <h2>Default</h2>
     <un-sdg 
-      label="overridden alt text"
+      label="Default Values"
     ></un-sdg>
 
-    <h2>un-sdg 1-17, circle, and all</h2>
-    <div class="sdc-wrapper">
+    <h2>All SVGS</h2>
+    <div class="wrapper">
       <un-sdg goal="circle"></un-sdg>
       <un-sdg goal="all"></un-sdg>
       <un-sdg goal="1"></un-sdg>
@@ -73,8 +73,8 @@
       <un-sdg goal="17"></un-sdg>
     </div>
 
-    <h2>un-sdg 1-17, circle, and all with colorOnly set to "true"</h2>
-    <div class="sdc-wrapper">
+    <h2>Background Color Only No SVG</h2>
+    <div class="wrapper">
       <un-sdg goal="circle" colorOnly="true"></un-sdg>
       <un-sdg goal="all" colorOnly="true"></un-sdg>
       <un-sdg goal="1" colorOnly="true"></un-sdg>
@@ -95,14 +95,6 @@
       <un-sdg goal="16" colorOnly="true"></un-sdg>
       <un-sdg goal="17" colorOnly="true"></un-sdg>
     </div>
-
-    <!--
-    <h2>Slot usage</h2>
-    <un-sdg data-accent="2" data-primary="17"><div>Sample slot content</div></un-sdg>
-
-    <h2>Property usage</h2>
-    <un-sdg id="example" title="Sample property title"></un-sdg>
-    -->
   </div>
   <script type="module" src="./src/un-sdg.js"></script>
 

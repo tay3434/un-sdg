@@ -7,26 +7,22 @@ export class unSdg extends DDDSuper(LitElement) {
     return "un-sdg";
   }
 
-  // sets default variables
+  //sets default property values
   constructor() {
     super();
     this.goal = "circle";
-    // //change whatver image name is 
-    // this.imgSrc = new URL('../lib/svgs/circle.svg', import.meta.url).href;
     this.width = "254px";
     this.height = "254px";
     this.label = "Sustainable development";
     this.loading = "lazy"
     this.fetchPriority = "low";
     this.colorOnly = false;
-    // this.isImageVisible = "true";
   }
 
-  // sets variable types
+  // sets property types
   static get properties() {
     return {
-      // reflect: true automatically changes the value according to attributes. Binds properties to attributes.
-      goal: { type: String, reflect: true },
+      goal: { type: String, reflect: true }, // reflect: true makes a property in your component automatically sync with an attribute in the HTML
       width: { type: String },
       height: { type: String },
       label: { type: String },
@@ -36,7 +32,8 @@ export class unSdg extends DDDSuper(LitElement) {
     };
   }
 
-  // sets styles including CSS properties
+  // creates styling variables for "svg" background colors 
+  // also sets some other CSS styles
   static get styles() {
     return [super.styles,
     css`
@@ -64,7 +61,7 @@ export class unSdg extends DDDSuper(LitElement) {
         height: var(--height, 254px);
         background-color: white;
       }
-      .svg-wrapper {
+      .wrapper {
         width: var(--width, 254px);
         height: var(--height, 254px);
         padding: 0;
@@ -77,14 +74,14 @@ export class unSdg extends DDDSuper(LitElement) {
     `];
   }
 
-  // When a value changes, this function runs
+  //when a property changes this method runs
   updated(changedProperties) {
-    // When a 'goal' is set, update the alt text
+    // if the property changed has an associated goal, the alt text/label changes
     if (changedProperties.has('goal')) {
       this.updateAlt();
     } 
   }
-  // Changes this.label (the alt text) according to what case it is
+  // changes the label/alt text based on the goal/what text is set for each goal
   updateAlt() {
     const goal = this.getAttribute('goal');
     switch (goal) {
@@ -149,14 +146,15 @@ export class unSdg extends DDDSuper(LitElement) {
   }
 
   render() {
-    // const imgSrc = new URL(`../lib/svgs/goal-${this.goal}.svg`, import.meta.url).href;
-    // Sets the image source according to what number the goal is
+    // supposed to set the image to corresponding svg
+    //cannot figure out problem, format seems correct as well as inspecting on vercel
     let imgSrc = new URL(`../lib/svgs/${this.goal}.svg`, import.meta.url).href;
-    // If the goal is all, set it to the all svg
+
+    // if goal is equal to all, set image to "all.svg"
     if (this.goal === 'all') {
       imgSrc = new URL(`../lib/svgs/all.svg`, import.meta.url).href; 
     }
-    // If the goal is circle, set it to the circle image
+    // if goal is equal to circle, set image to "circle.svg"
     else if (this.goal === 'circle') {
       imgSrc = new URL(`../lib/svgs/circle.svg`, import.meta.url).href;
     }
@@ -168,12 +166,12 @@ export class unSdg extends DDDSuper(LitElement) {
           --height: ${this.height};
         }
        </style>
-      <!-- Updates the background-color according to the associated variable goal color -->
-      <!-- background-color is set to white for circle.png and all.svg since it's set to white on :host -->
+      <!-- changes background colors based on what goal is set -->
+      <!-- all and circle has white background to match background of svg -->
       <div class="svg-wrapper" 
         style="background-color: var(--un-sdg-goal-${this.goal});"
         >
-        <!-- Ternary. Only run <img/> if this.colorOnly is false -->
+        <! only runs if colorOnly is false -->
         ${this.colorOnly ? `` : 
           html `
             <img 
@@ -187,9 +185,6 @@ export class unSdg extends DDDSuper(LitElement) {
     `;
   }
 
-  /**
-   * haxProperties integration via file reference
-   */
   static get haxProperties() {
     return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
       .href;
