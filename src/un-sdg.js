@@ -11,15 +11,15 @@ export class unSdg extends DDDSuper(LitElement) {
   constructor() {
     super();
     this.goal = "circle";
-    //change whatver image name is 
-    this.imgSrc = new URL('../lib/svgs/circle.svg', import.meta.url).href;
+    // //change whatver image name is 
+    // this.imgSrc = new URL('../lib/svgs/circle.svg', import.meta.url).href;
     this.width = "254px";
     this.height = "254px";
     this.label = "Sustainable development";
     this.loading = "lazy"
     this.fetchPriority = "low";
     this.colorOnly = false;
-    this.isImageVisible = "true";
+    // this.isImageVisible = "true";
   }
 
   // sets variable types
