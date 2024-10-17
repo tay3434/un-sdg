@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/un-sdg.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "unSdg",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "method",
+              "name": "updateAlt"
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "goal",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"circle\"",
+              "privacy": "public",
+              "attribute": "goal",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "width",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"254px\"",
+              "privacy": "public",
+              "attribute": "width"
+            },
+            {
+              "kind": "field",
+              "name": "height",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"254px\"",
+              "privacy": "public",
+              "attribute": "height"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Sustainable development\"",
+              "privacy": "public",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"lazy\"",
+              "privacy": "public",
+              "attribute": "loading",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "fetchPriority",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"low\"",
+              "privacy": "public",
+              "attribute": "fetchPriority",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "colorOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "privacy": "public",
+              "attribute": "colorOnly"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "goal",
+              "fieldName": "goal"
+            },
+            {
+              "name": "width",
+              "fieldName": "width"
+            },
+            {
+              "name": "height",
+              "fieldName": "height"
+            },
+            {
+              "name": "label",
+              "fieldName": "label"
+            },
+            {
+              "name": "loading",
+              "fieldName": "loading"
+            },
+            {
+              "name": "fetchPriority",
+              "fieldName": "fetchPriority"
+            },
+            {
+              "name": "colorOnly",
+              "fieldName": "colorOnly"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "unSdg",
+          "declaration": {
+            "name": "unSdg",
+            "module": "src/un-sdg.js"
+          }
+        }
+      ]
+    }
+  ]
+}
