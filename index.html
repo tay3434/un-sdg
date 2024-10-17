@@ -11,7 +11,7 @@
     :root, html, body {
       margin: 0;
       padding: 0;
-      background-color: var(--ddd-accent-1);
+      background-color: var(--ddd-accent-1); 
     }
     #demo {
       margin: var(--ddd-spacing-2);
@@ -20,13 +20,16 @@
       display: flex;
       flex-wrap: wrap;
     }
+    .design{
+     color: var(--ddd-theme-default-navy80);
+    }
   </style>
   <title>un-sdg</title>
 </head>
 
 <body>
   <div id="demo">
-    <h1>un-sdg</h1>
+    <h1 class="design">un-sdg</h1>
     <button id="random">Randomize Goal</button>
     <script>
       document.querySelector('#random').addEventListener('click', function(event) {
@@ -45,12 +48,12 @@
       fetchpriority="high"
     ></un-sdg>
 
-    <h2>Default</h2>
+    <h2 class="design">Default</h2>
     <un-sdg 
       label="Default Values"
     ></un-sdg>
 
-    <h2>All SVGS</h2>
+    <h2 class="design">All SVGS</h2>
     <div class="wrapper">
       <un-sdg goal="circle"></un-sdg>
       <un-sdg goal="all"></un-sdg>
@@ -73,7 +76,7 @@
       <un-sdg goal="17"></un-sdg>
     </div>
 
-    <h2>Background Color Only No SVG</h2>
+    <h2 class="design">Background Color Only No SVG</h2>
     <div class="wrapper">
       <un-sdg goal="circle" colorOnly="true"></un-sdg>
       <un-sdg goal="all" colorOnly="true"></un-sdg>
@@ -97,8 +100,7 @@
     </div>
   </div>
   <script type="module" src="./src/un-sdg.js"></script>
-
-  <!-- Take HAX, the Web and you further down the rabbit hole -->
+<!-- 
   <style>
     #follow-the-white-rabbit {
       margin: var(--ddd-spacing-4) auto 64px  16px;
@@ -175,6 +177,6 @@
         <li><strong>💡 <em>Never. Stop. Innovating.</em></strong></li>
       </ul>
     </div>
-  </details>
+  </details> -->
 </body>
 </html>

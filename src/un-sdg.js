@@ -13,7 +13,7 @@ export class unSdg extends DDDSuper(LitElement) {
     this.goal = "circle";
     this.width = "254px";
     this.height = "254px";
-    this.label = "Sustainable development";
+    this.label = "example";
     this.loading = "lazy"
     this.fetchPriority = "low";
     this.colorOnly = false;
